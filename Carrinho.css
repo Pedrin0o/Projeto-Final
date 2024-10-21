@@ -1,0 +1,116 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+.cart-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: #b9b9b9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.cart-table th {
+    color: #fff;
+}
+
+.cart-table td img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.cart-table td {
+    color: #ddd;
+}
+
+.cart-table td .quantity-input {
+    width: 50px;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.total {
+    text-align: right;
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 30px;
+}
+
+.checkout-btn {
+    display: block;
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}

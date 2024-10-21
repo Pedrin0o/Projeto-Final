@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lexend:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Carrinho.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Adicione o conteúdo do seu cabeçalho aqui, como logo e navegação -->
+    </header>
+
+    <!-- Conteúdo do Carrinho -->
+    <div class="cart-container">
+        <h1>Carrinho de Compras</h1>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Total</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="Bayern de Munique 23_24 - All Black.JPG" alt="Produto"> </td>
+                    <td><input type="number" class="quantity-input" value="1"></td>
+                    <td>R$ 150,00</td>
+                    <td>R$ 150,00</td>
+                    <td><button class="remove-btn">Remover</button></td>
+                </tr>
+                <!-- Repita este bloco para cada produto no carrinho -->
+            </tbody>
+        </table>
+
+        <div class="total">
+            Total: R$ 300,00
+        </div>
+
+        <a href="checkout.html" class="checkout-btn">Finalizar Compra</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Allures Sports. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

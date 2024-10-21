@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Produto</title>
+    <link rel="stylesheet" href="produto.css">
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-image-section">
+            <img id="product-image" src="brinco 1.png" alt="Produto">
+            <div class="thumbnail-section">
+                <img src="brinco 1.png" alt="Produto 1" class="thumbnail" onclick="changeImage('produto1.jpg')">
+                <img src="brinco 2.png" alt="Produto 2" class="thumbnail" onclick="changeImage('produto2.jpg')">
+                <img src="brinco 3.png" alt="Produto 3" class="thumbnail" onclick="changeImage('produto3.jpg')">
+            </div>
+        </div>
+        <div class="product-page">
+            <!-- Seção de imagem -->
+            <div class="product-image-section">
+                <img id="product-image" src="images/produto1.jpg" alt="Produto" class="main-image">
+                <div class="thumbnail-section">
+                    <img src="images/produto1.jpg" alt="Produto 1" class="thumbnail" onclick="changeImage('images/produto1.jpg')">
+                    <img src="images/produto2.jpg" alt="Produto 2" class="thumbnail" onclick="changeImage('images/produto2.jpg')">
+                    <img src="images/produto3.jpg" alt="Produto 3" class="thumbnail" onclick="changeImage('images/produto3.jpg')">
+                </div>
+            </div>
+
+            <!-- Seção de detalhes -->
+            <div class="product-details-section">
+                <h1>Nome do Produto</h1>
+                <p class="price">R$ 999,99</p>
+                <p class="description">Descrição detalhada do produto.</p>
+                <button class="buy-now">Comprar Agora</button>
+            </div>
+        </div>
+
+        <!-- Script JavaScript para troca de imagem -->
+        <script>
+            function changeImage(imageSrc) {
+                document.getElementById("product-image").src = imageSrc;
+            }
+        </script>
+        <div class="product-details-section">
+            <h1>Brinco ear cuff</h1>
+            <p class="price">R$ 158,99</p>
+            <p class="description">Descrição detalhada do produto aqui. Inclui todas as características importantes.</p>
+            
+            <label for="color">Cor:</label>
+            <select id="color">
+                <option value="preto">Prata</option>
+                <option value="branco">Ouro</option>
+                <option value="dourado">Outros</option>
+            </select>
+
+            <label for="size">Tamanho:</label>
+            <select id="size">
+                <option value="p">P</option>
+                <option value="m">M</option>
+                <option value="g">G</option>
+            </select>
+
+            <div class="buy-section">
+                <button class="buy-now">Comprar Agora</button>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById("product-image").src = imageSrc;
+        }
+    </script>
+</body>
+</html>

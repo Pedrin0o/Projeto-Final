@@ -1,0 +1,380 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px; /* Espessura mais fina da linha */
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(255, 0, 0)); /* Gradiente de cima para baixo */
+    margin: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Efeito de profundidade sutil */
+}
+
+nav {
+    background-color: rgb(255, 0, 0); /* Cor de fundo clara e sutil que combina com a cor do título */
+    padding: 10px 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff0000;
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li a {
+    font-family: "Lexend", sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+    position: relative; /* Adiciona posição relativa para o pseudo-elemento */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Linha mais fina */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 0, 0, 0.5); /* Efeito de luz */
+    transition: width 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o sublinhado e efeito de luz */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Faz a linha ocupar toda a largura do elemento ao passar o mouse */
+    box-shadow: 0 0 15px rgb(0, 0, 0), 0 0 30px rgba(0, 0, 0, 0.7); /* Efeito de brilho mais intenso ao passar o mouse */
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+li .joiasbtn {
+    font-family: "Lexend", sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+}
+
+.joiasbtn:hover {
+    color: #ffffff;
+    padding: -10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: "Lexend", sans-serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.h1 {
+    background-color: rgb(39, 38, 38);
+    color: #b9b9b9;
+    padding: 30px 0; /* Aumenta o padding superior e inferior */
+    margin: 0; /* Remove qualquer margem ao redor */
+    width: 100%; /* Faz com que o título ocupe toda a largura da tela */
+    text-align: center; /* Centraliza o texto */
+    font-size: 3rem; /* Tamanho de fonte maior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombreamento ao texto */
+    border-radius: 0; /* Remove bordas arredondadas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 700; /* Aplica um peso de fonte mais forte para maior impacto */
+}
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+
+/* Conteúdo do Produto */
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #1e1e1e; /* Fundo escuro para a área do produto */
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.product-image img {
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-details {
+    max-width: 600px;
+}
+
+.product-details h1 {
+    font-size: 36px; /* Fonte maior para o título */
+    color: #f0f0f0;
+}
+
+.product-price {
+    font-size: 28px;
+    color: #ff5722; /* Cor destacada para o preço */
+    margin: 20px 0;
+}
+
+.product-description {
+    font-size: 18px; /* Texto mais legível */
+    color: #bdbdbd;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-form label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.add-to-cart-form select,
+.add-to-cart-form input {
+    margin: 10px 0;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+.add-to-cart-btn {
+    background-color: #ff5722;
+    border-radius: 15px; /* Arredondamento */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Produtos Relacionados */
+.related-products {
+    background-color: #1e1e1e;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.related-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.related-products-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.related-product img {
+    width: 220px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.related-product p {
+    font-size: 18px;
+    color: #f5f5f5;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card {
+    width: 300px;
+    background-color: #232323;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para flutuação */
+}
+.card:hover {
+    transform: translateY(-10px); /* Eleva o card para dar o efeito de flutuação */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar a impressão de profundidade */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 20px 0;
+    color: #d1d1d1;
+}
+
+.card p {
+    color: #777;
+}
+
+.card .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #333;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+.search-login {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.search-bar {
+    padding: 10px;
+    border: none; /* Remove bordas */
+    border-radius: 25px; /* Arredondar completamente */
+    background-color: #efedeb; /* Cor de fundo limpa */
+    font-family: 'Lexend', sans-serif; /* Fonte bonita */
+    margin-right: 10px; /* Espaço entre a barra de pesquisa e os botões */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+.login-btn, .entrar-btn {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    margin-left: 5px; /* Espaço entre os botões */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-btn:hover, .entrar-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espalha menu e botões para os lados opostos */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.menu {
+    display: flex; /* Mantém os itens do menu em linha */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px; /* Espaço entre os itens do menu */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color:rgb(39, 38, 38); /* Cor de fundo para o cabeçalho */
+}
