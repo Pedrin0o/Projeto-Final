@@ -27,20 +27,20 @@
                     <th>Ação</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="cart-items">
                 <tr>
-                    <td><img src="Bayern de Munique 23_24 - All Black.JPG" alt="Produto"> </td>
-                    <td><input type="number" class="quantity-input" value="1"></td>
-                    <td>R$ 150,00</td>
-                    <td>R$ 150,00</td>
+                    <td><img src="Bayern de Munique 23_24 - All Black.JPG" alt="Produto" class="product-img"></td>
+                    <td><input type="number" class="quantity-input" value="1" min="1"></td>
+                    <td class="unit-price">R$ 150,00</td>
+                    <td class="total-price">R$ 150,00</td>
                     <td><button class="remove-btn">Remover</button></td>
                 </tr>
-                <!-- Repita este bloco para cada produto no carrinho -->
+                <!-- Exemplo de produto adicionado ao carrinho -->
             </tbody>
         </table>
 
         <div class="total">
-            Total: R$ 300,00
+            <strong>Total: </strong> R$ <span id="grand-total">150,00</span>
         </div>
 
         <a href="checkout.html" class="checkout-btn">Finalizar Compra</a>
@@ -50,6 +50,45 @@
     <footer>
         <p>&copy; 2024 Allures Sports. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Função para atualizar o total do produto e o total geral
+        function updateTotal() {
+            let totalPrice = 0;
+            const cartItems = document.querySelectorAll('#cart-items tr');
+            
+            cartItems.forEach(item => {
+                const quantity = item.querySelector('.quantity-input').value;
+                const unitPrice = parseFloat(item.querySelector('.unit-price').textContent.replace('R$', '').trim());
+                const totalPricePerItem = quantity * unitPrice;
+                item.querySelector('.total-price').textContent = 'R$ ' + totalPricePerItem.toFixed(2);
+                totalPrice += totalPricePerItem;
+            });
+
+            document.getElementById('grand-total').textContent = totalPrice.toFixed(2);
+        }
+
+        // Função para remover produto do carrinho
+        function removeItem(event) {
+            const row = event.target.closest('tr');
+            row.remove();
+            updateTotal(); // Atualiza o total após remoção
+        }
+
+        // Adicionando event listener para cada botão de remoção
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', removeItem);
+        });
+
+        // Adicionando event listener para cada input de quantidade
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('input', updateTotal);
+        });
+
+        // Atualiza o total ao carregar a página
+        window.onload = updateTotal;
+    </script>
 
 </body>
 </html>
